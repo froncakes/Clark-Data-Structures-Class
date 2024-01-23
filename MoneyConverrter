@@ -1,0 +1,56 @@
+/*
+Frankie Nolan
+1/18/2024
+CSCI 121 Sec 02.
+
+Money Convertor Class
+Converts money formatted as a double "0.00" and converts it to coins through the most optimal way
+Added pennies and made sure to keep the double input formatted as money by the user correctly
+*/
+import java.util.Scanner;
+public class Main {
+    static Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+        CoinCalculation();
+    }
+    public static void CoinCalculation(){
+        /* separate variables MONEY acts as a constant of the double given by the user,
+        while money acts as a way to easily divide the money into quarters dimes nickels and pennies
+         */
+        System.out.println("input a dollar amount like *N.NN* such as 3.75 and get the amount of coins it is back");
+        double MONEY = scan.nextDouble();
+        int money = (int)(MONEY*100);
+        int quarters = money/25;
+        money %= 25;
+        int dimes = money/10;
+        money %= 10;
+        int nickels = money/5;
+        money %= 5;
+        int pennies = money;
+        // checking for remainder to add a zero to the end of MONEY so it is correctly formatted
+        if (MONEY*100%10==0){
+            System.out.print("Your change of $"+(MONEY)+"0 dollars is equal to ");
+        }else {
+            System.out.print("Your change of $" + (MONEY) + " dollars is equal to ");
+        }
+        // if statements in order to have them only appear if necessary
+        if (quarters > 0) {
+            System.out.print(quarters + " quarters ");
+        }
+        if (dimes > 0) {
+            System.out.print(dimes + " dimes ");
+        }
+        if (nickels > 0) {
+            System.out.print(nickels + " nickels ");
+        }
+        if (pennies > 0) {
+            System.out.print(pennies + " pennies");
+        }
+        // calls function and asks the user if they would like to check another amount on Y, repeats the process, on N, process stops
+        System.out.println();
+        System.out.println("would you like to check another amount? type Y/N");
+        if (scan.next().charAt(0) == 'Y'){
+            CoinCalculation();
+        }
+    }
+}
