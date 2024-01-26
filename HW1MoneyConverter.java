@@ -50,10 +50,10 @@ public class HW1MoneyConverter {
         if (dimes > 0) {
             System.out.print(dimes + " dimes ");
         }
-        if (nickels > 0 & !nickelConvert) {
+        if (nickels > 0) {
             System.out.print(nickels + " nickels ");
         }
-        if (pennies > 0 & !pennyConvert) {
+        if (pennies > 0) {
             System.out.print(pennies + " pennies");
         }
         /*
