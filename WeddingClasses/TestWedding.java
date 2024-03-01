@@ -3,7 +3,7 @@
  * 2/29/2024
  *
  * added a way to look at all the different details of the Wedding class aswell as a way to add guests to the Wedding
- * added constructors to Person and Couple aswell.
+ * added a constructor to Wedding aswell.
  */
 
 import java.time.LocalDate;
