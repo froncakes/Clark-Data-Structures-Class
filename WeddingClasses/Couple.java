@@ -1,6 +1,6 @@
 public class Couple {
-    private Person bride = new Person("test","aaa");
-    private Person groom = new Person("bleh","uweh");
+    private Person bride = new Person("first","last");
+    private Person groom = new Person("first","last");
     public Couple(Person a, Person b){
         bride = a;
         groom = b;
