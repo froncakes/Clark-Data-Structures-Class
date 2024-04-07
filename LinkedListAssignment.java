@@ -5,12 +5,12 @@ public class LinkedListAssignment {
     }
     // removes the node after the number given
     public void removeAfter(LinkedList a, int i){
-        if (i < 0 || i >= a.size()-1){
-
+        if (i > 0 || i < a.size()-1){
+            a.remove(i +1);
         }
     }
     public LinkedList copy(LinkedList a){
-
+        
     }
     public void removeDuplicate(LinkedList a, String dup){
 
